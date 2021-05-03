@@ -1,0 +1,1 @@
+{'name': 'Longsword', 'dice': 8, 'numdice': 1, 'weapon': 'Longsword', 'dmgtype': 'Slashing', 'range': 5, 'special': False, 'other': False, 'ammunition': False, 'versatile': True}

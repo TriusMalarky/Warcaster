@@ -1,0 +1,2 @@
+ { What range does this attack have? (Use numbers divisible by 5. Use 5 for a melee attack, even if the weapon used has reach.
+| 

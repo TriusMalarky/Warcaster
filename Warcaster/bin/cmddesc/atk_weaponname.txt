@@ -1,0 +1,2 @@
+ { What weapon is this attack tied to? (Use 'body' if it is something like teeth or claws)
+| 

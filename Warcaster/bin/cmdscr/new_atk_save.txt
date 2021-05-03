@@ -1,0 +1,1 @@
+savedattacks.add(atkdata["name"]);savedattackfile=open("Attacks\index.txt","w");savedattackfile.write(str(savedattacks));savedattackfile.close();newatkfile=open("Attacks/"+str(atkdata["name"])+".txt","w");newatkfile.write(str(atkdata));newatkfile.close();print(" - Complete -")

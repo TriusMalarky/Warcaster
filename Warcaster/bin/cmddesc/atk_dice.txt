@@ -1,0 +1,2 @@
+ { What dice should the attack use for damage? (Use just the number, i.e. a d6 would be '6'. Don't use non-number symbols or this will break.)
+| 
