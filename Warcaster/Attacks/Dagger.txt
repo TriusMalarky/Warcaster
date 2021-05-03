@@ -1,0 +1,1 @@
+{'name': 'Dagger', 'dice': 4, 'numdice': 1, 'weapon': 'Dagger', 'dmgtype': 'Slashing', 'range': 5}
