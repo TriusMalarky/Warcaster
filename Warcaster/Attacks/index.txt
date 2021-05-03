@@ -1,1 +1,1 @@
-{'Shortsword', 'Dagger', 'Longsword'}
+{'Battleaxe', 'Dagger', 'Longsword', 'Shortsword'}

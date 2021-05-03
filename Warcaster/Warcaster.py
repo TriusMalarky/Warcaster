@@ -35,20 +35,4 @@ while running:
     elif uinput[:1] in newcmd or uinput[:3] in newcmd:
         print(">New Entry")
         if atkcmd in uinput:
-            print(">>New Attack");atkdata = {};atkdata["name"]=input(" { What would you like to call the attack?\n| ")
             new_atk=open("bin/cmdscr/new_atk.txt");exec(new_atk.read())
-            if "Y" in input(" { Does this attack have any special effects? Y/N\n| ").upper():
-                specialdata = input(" { Select the details you want to add to this attack by typing their names. Separate each option with a comma if there are multiple.\n" +
-                                    " - Ammunition\n - Finesse\n - Heavy\n - Light\n - Loading\n - Ranged\n - Reach\n - Special\n - Thrown\n - Twohanded\n - Versatile\n"+
-                                    " - Improvised\n - Silvered\n - Other (Use for custom abilities)\n| ").upper()
-                atkdata['special']=False;atkdata['other']=False;atkdata['ammunition']=False
-                for x in specialatkarray:
-                    if x.upper() in specialdata:
-                        exec("atkdata['"+x.lower()+"']=True")
-                if atkdata["special"]:
-                    if "Y" in input(" { Is the weapon a net?\n| "): atkdata["net"]=True
-                    if "Y" in input(" { Is the weapon a lance?\n| "): atkdata["lance"]=True
-                if atkdata["other"]:
-                    atkdata["other_info"]=input(" { What special abilities does this attack have?\n| ")
-                if atkdata["ammunition"]: atkdata["ammo_type"]=input(" { What item does this attack use as ammunition?\n| ")
-            atk_save=open("bin/cmdscr/new_atk_save.txt");exec(atk_save.read())
