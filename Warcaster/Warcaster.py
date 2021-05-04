@@ -35,4 +35,4 @@ while running:
     elif uinput[:1] in newcmd or uinput[:3] in newcmd:
         print(">New Entry")
         if atkcmd in uinput:
-            new_atk=open("bin/cmdscr/new_atk.txt");exec(new_atk.read())
+            from bin.cmd.new_atk import new_atk;atkdata = {};atkdata=new_atk(atkdata,dmgtypearray,savedattacks)

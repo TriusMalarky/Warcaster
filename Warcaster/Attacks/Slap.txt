@@ -1,0 +1,1 @@
+{'name': 'Slap', 'dice': 1, 'numdice': 1, 'weapon': 'Body', 'dmgtype': 'Bludgeoning', 'range': 5}
