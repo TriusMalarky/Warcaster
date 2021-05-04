@@ -1,8 +1,6 @@
-#runtime variables
-running=True;dmgtypearray=["Acid","Bludgeoning","Cold","Fire","Force","Lightning","Necrotic","Piercing","Poison","Psychic","Radiant","Slashing","Thunder"]
-specialatkarray=["Ammunition","Finesse","Heavy","Light","Loading","Ranged","Reach","Special","Thrown","Twohanded","Versatile","Improvised","Silvered","Other"]
-specialoptionsarray=["Lance","Net"]
-savedattackfile = open("Attacks\index.txt");exec("global savedattacks; savedattacks = "+savedattackfile.read());savedattackfile.close()
+from bin.lib.runtimevar import runtimevar;rtar=runtimevar();running=rtar["running"];dmgtypearray=rtar["dmgtypearray"];specialatkarray=rtar["specialatkarray"]
+specialoptionsarray=rtar["specialoptionsarray"];savedattacks=rtar["savedattacks"]
+
 #command flags
 newcmd="NEW";helpcmd="HELP";debugcmd="DEBUG";exitcmd="EXIT";commandcmd="COMMAND";allcmd="ALL";atkcmd="ATK"
 cmdarray=[newcmd,atkcmd,helpcmd,debugcmd,exitcmd,commandcmd]
