@@ -12,13 +12,7 @@ while running:
         from bin.lib.debugcmd import debugcmd;debugcmd(uinput,cmdarray,commandcmd)
     #Help Functions
     elif uinput[:4] == helpcmd:
-        print(">Help")
-        if newcmd in uinput:
-            print(" - Create a new entry. Entry types include:\n  -> Attack(use 'atk' in commands)\n  -> Enemy\n - Use 'help [entry type] for more information.")
-        if atkcmd in uinput  or "ATTACK" in uinput:
-            print(" - Attacks are abilities that deal damage, but are not magical. Most of them are attached to a weapon.")
-        if debugcmd in uinput:
-            print(" - Used to debug the program.")
+        from bin.lib.help import help;help(cmdarray,uinput,newcmd,helpcmd,debugcmd,exitcmd,commandcmd,allcmd,atkcmd)
     #new entry
     elif uinput[:1] in newcmd or uinput[:3] in newcmd:
         print(">New Entry")
