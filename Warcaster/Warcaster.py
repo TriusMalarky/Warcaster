@@ -1,6 +1,5 @@
 from bin.lib.runtimevar import runtimevar;rtar=runtimevar();running=rtar["running"];dmgtypearray=rtar["dmgtypearray"];specialatkarray=rtar["specialatkarray"]
 specialoptionsarray=rtar["specialoptionsarray"];savedattacks=rtar["savedattacks"]
-
 #command flags
 newcmd="NEW";helpcmd="HELP";debugcmd="DEBUG";exitcmd="EXIT";commandcmd="COMMAND";allcmd="ALL";atkcmd="ATK"
 cmdarray=[newcmd,atkcmd,helpcmd,debugcmd,exitcmd,commandcmd]
@@ -10,16 +9,7 @@ while running:
     uinput=input("| ");uinput=uinput.upper()
     #Debug Functions
     if uinput[:5] == debugcmd:
-        print("> Debug:")
-        if uinput[6:] in commandcmd:
-            print(" - Checking for Command Conflictions - ")
-            for x in cmdarray:
-                for n in cmdarray:
-                    if x == n:continue
-                    else:
-                        if any(i in x for i in n):
-                            print(str(x) + " shares a value with " + str(n))
-            print(" - Complete -")
+        from bin.lib.debugcmd import debugcmd;debugcmd(uinput,cmdarray,commandcmd)
     #Help Functions
     elif uinput[:4] == helpcmd:
         print(">Help")
