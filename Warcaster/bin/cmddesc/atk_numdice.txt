@@ -1,2 +1,0 @@
- { How many dice should the attack use for damage? (Number symbols only)
-| 
