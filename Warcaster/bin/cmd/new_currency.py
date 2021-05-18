@@ -18,5 +18,10 @@ def new_currency(data,saved):
                 print(" { You typed an invalid option. You will need to edit this entry to add a value for this option.")
     saved.append(data["name"])
     savedfile=open("Currency\index.py","w")
-    savedstr=str(saved);savedfile.write(str("savedcurrencies="+savedstr))
+    savedn=[]
+    for i in saved:
+        if i not in savedn:
+            savedn.append(i)
+    savednstr=str(savedn)
+    savedfile.write(str("savedcurrencies="+savednstr))
     savedfile.close();newfile=open("Currency/"+str(data["name"])+".txt","w");newfile.write(str(data));newfile.close();print(" - Complete -")

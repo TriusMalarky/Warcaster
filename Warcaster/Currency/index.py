@@ -1,1 +1,1 @@
-savedcurrencies=['Gold Piece', 'test', 'Silver Piece', 'Copper Piece', 'Electrum Piece', 'Platinum Piece', 'Gold Piece']
+savedcurrencies=['Copper Piece', 'Silver Piece', 'Electrum Piece', 'Gold Piece', 'Platinum Piece']
