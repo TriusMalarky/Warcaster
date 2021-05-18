@@ -1,0 +1,1 @@
+{'name': 'Silver Piece', 'Gold Piecenegrate': 10, 'testnegrate': 1}
