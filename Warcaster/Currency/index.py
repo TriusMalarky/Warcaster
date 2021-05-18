@@ -1,0 +1,1 @@
+savedcurrencies=['Gold Piece', 'test']
