@@ -25,3 +25,4 @@ def new_currency(data,saved):
     savednstr=str(savedn)
     savedfile.write(str("savedcurrencies="+savednstr))
     savedfile.close();newfile=open("Currency/"+str(data["name"])+".txt","w");newfile.write(str(data));newfile.close();print(" - Complete -")
+    from bin.cmd.reconcile_currency import reconcile_currency;reconcile_currency(saved)
