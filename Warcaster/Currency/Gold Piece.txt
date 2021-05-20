@@ -1,1 +1,1 @@
-{'name': 'Gold Piece', 'Gold Pieceposrate': 1, 'testposrate': 1, 'Silver Pieceposrate': 10, 'Copper Pieceposrate': 100, 'Electrum Pieceposrate': 2, 'Platinum Piecenegrate': 10}
+{'name': 'Gold Piece', 'testposrate': 1, 'Silver Pieceposrate': 10, 'Copper Pieceposrate': 100, 'Electrum Pieceposrate': 2, 'Platinum Piecenegrate': 10}
