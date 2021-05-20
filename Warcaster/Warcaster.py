@@ -3,7 +3,7 @@ from bin.lib.runtimevar import runtimevar;rtar=runtimevar();running=rtar["runnin
 specialoptionsarray=rtar["specialoptionsarray"];savedattacks=rtar["savedattacks"];savedcurrencies=rtar["savedcurrencies"]
 #command flags
 newcmd="NEW";helpcmd="HELP";debugcmd="DEBUG";exitcmd="EXIT";commandcmd="COMMAND";allcmd="ALL";atkcmd="ATK"
-itemcmd="ITEM";curcmd="CURREN"
+itemcmd="ITEM";curcmd="CURREN";reconcmd="RECON"
 cmdarray=[newcmd,atkcmd,helpcmd,debugcmd,exitcmd,commandcmd,itemcmd,curcmd]
 #initialize
 dashln=30;print("-"*dashln+"| Warcaster |"+"-"*dashln)
@@ -24,3 +24,7 @@ while running:
             from bin.cmd.new_item import new_item;itemdata={};itemdata=new_item(itemdata)
         elif curcmd in uinput:
             from bin.cmd.new_currency import new_currency;curdata={};curdata=new_currency(curdata,savedcurrencies)
+    elif uinput[:5] in reconcmd:
+        print(">Reconciling")
+        if curcmd in uinput:
+            from bin.cmd.reconcile_currency import reconcile_currency;reconcile_currency(savedcurrencies)
