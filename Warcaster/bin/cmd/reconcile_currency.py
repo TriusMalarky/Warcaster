@@ -1,9 +1,13 @@
 def reconcile_currency(saved):
     print(" - Reconciling Currencies - ")
-    currencies={}
-    for i in saved: #Generate the dictionary needed for reconciliation
+
+    # Start Generate Reconciliation Dictionary
+    currencies={} # <- Define Local Dictionary
+    for i in saved: # <- Calls the main-list 'savedcurrencies'
         rfile=open("Currency/"+i+".txt","r+")
         exec("currencies['"+i+"']="+rfile.read())
+    # End Generate Reconciliation Dictionary
+    
     for i in currencies:
         entrypoplist = []
         for x in currencies[i]:
