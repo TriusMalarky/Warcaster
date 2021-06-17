@@ -1,10 +1,8 @@
 import os # <- Import Operating System. I forgot what this was for, it might not be relevant anymore. Leave it in.
+from bin.lib.entrylib import * # Import Entry Library Functions
 
-# Import variables from the runtimevar module.I set this up so that all the long and complicated variables don't have to be scrolled past when
-# working on the main. dmgtypearray in particular is incredibly long.
-from bin.lib.runtimevar import runtimevar;rtar=runtimevar();running=rtar["running"];dmgtypearray=rtar["dmgtypearray"]
-specialatkarray=rtar["specialatkarray"];specialoptionsarray=rtar["specialoptionsarray"];savedattacks=rtar["savedattacks"]
-savedcurrencies=rtar["savedcurrencies"]
+# Import variables from the init
+from bin.lib.init import init;save=init()
 
 # Command Flags.
 # These used to be lists in order to implement aliases for each command, but I had trouble implementing it so I put that to the side to work
@@ -16,7 +14,7 @@ itemcmd="ITEM";curcmd="CURREN";reconcmd="RECON"
 cmdarray=[newcmd,atkcmd,helpcmd,debugcmd,exitcmd,commandcmd,itemcmd,curcmd,reconcmd]
 
 
-dashln=30;print("-"*dashln+"| Warcaster |"+"-"*dashln) # Prints the title banner at the beginning of the script.
+dashln=30*"-";print(dashln+"| Warcaster |"+dashln) # Prints the title banner at the beginning of the script.
 
 
 while running: # <- The while running section makes sure the script runs until the user turns it off. I haven't actually implemented the exit command yet.

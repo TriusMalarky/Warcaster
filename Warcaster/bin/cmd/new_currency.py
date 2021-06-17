@@ -1,6 +1,15 @@
+# Variable 'data' is an empty dictionary passed from main and returned.
+# Variable 'saved' is 'savedcurrencies' list from main.
+
 def new_currency(data,saved):
-    print(">>New Currency")
+
+    # Function Banner
+    print(">> New Currency")
+
+    # Get Currency Name
     data["name"]=input(" { What would you like to call the currency?\n| ")
+
+    
     for i in saved:
         inp = input(" { Is this worth more(type 'M') or less(type 'L') than "+i+"\n| ")
         if inp.upper() == "M":
@@ -16,6 +25,8 @@ def new_currency(data,saved):
                 data[i+"negrate"]=int(input(" { How many "+data["name"]+" is a "+i+" worth?\n| "))
             else:
                 print(" { You typed an invalid option. You will need to edit this entry to add a value for this option.")
+
+                
     saved.append(data["name"])
     savedfile=open("Currency\index.py","w")
     savedn=[]
