@@ -16,7 +16,7 @@ def init():
     
     from Currency.index import savedcurrencies;save["currencies"]=savedcurrencies
     
-    #from Systems import savedsystems;save["systems"]=savedsystems
+    from bin.lib.systems import saved;save["systems"]=saved
 
     from bin.lib.cmdflags import cmdflags;save["flags"]=cmdflags
     
