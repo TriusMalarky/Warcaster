@@ -1,0 +1,1 @@
+cmdflags={ "list": ['new','help','debug','exit','command','all','attack','item','currency','reconcile'], 'new':'new','help':'help','debug':'debug','exit':'exit','command':'command','all':'all','attack':'atk','item':'item','currency':'curren','reconcile':'recon'

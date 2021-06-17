@@ -4,15 +4,6 @@ from bin.lib.entrylib import * # Import Entry Library Functions
 # Import variables from the init
 from bin.lib.init import init;save=init()
 
-# Command Flags.
-# These used to be lists in order to implement aliases for each command, but I had trouble implementing it so I put that to the side to work
-# on more important functions. I'll revisit that functionality at a later date.
-newcmd="NEW";helpcmd="HELP";debugcmd="DEBUG";exitcmd="EXIT";commandcmd="COMMAND";allcmd="ALL";atkcmd="ATK"
-itemcmd="ITEM";curcmd="CURREN";reconcmd="RECON"
-# An array containing all of the command flags. Was used in a debug function that I had implemented to run through all the command flag lists
-# and detect conflicting flags. That function is still in the code, but isn't useful.
-cmdarray=[newcmd,atkcmd,helpcmd,debugcmd,exitcmd,commandcmd,itemcmd,curcmd,reconcmd]
-
 
 dashln=30*"-";print(dashln+"| Warcaster |"+dashln) # Prints the title banner at the beginning of the script.
 

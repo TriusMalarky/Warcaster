@@ -12,16 +12,12 @@ def init():
     # Special Options.
     save["specialoptionsarray"]=["Lance","Net"]
     
-    # Attacks.
-    # The variables above will look more like this* once we rework them.
-    from Attacks.index import savedattacks
-    save["attacks"]=savedattacks
+    from Attacks.index import savedattacks;save["attacks"]=savedattacks
+    
+    from Currency.index import savedcurrencies;save["currencies"]=savedcurrencies
+    
+    from Systems import savedsystems;save["systems"]=savedsystems
 
-    # Currencies.
-    # *This looks different from the attacks because I couldn't get it to work for this for some reason. This is smoother though, so I'll be
-    # switching the attacks over to this.
-    from Currency.index import savedcurrencies
-    save["currencies"]=savedcurrencies
-
+    from bin.lib.cmdflags import cmdflags;save["flags"]=cmdflags
     
     return save # <- Returns the above variables to main
