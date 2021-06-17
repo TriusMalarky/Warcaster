@@ -21,7 +21,23 @@ while save["running"]: # <- Runs the program until exit command is given
 
     elif uinput[0] in findflag("new"):
         if len(uinput) > 1:
-            if uinput[1] in findflag("system"): from bin.cmd.new_system import new_system;new_system(save["systems"])
+            if uinput[1] in findflag("system"): from bin.cmd.new_system import new_system;save["systems"]=new_system(save["systems"])
+        else: print(" >> Please specify entry type")
+
+    elif uinput[0] in findflag("delete"):
+        if len(uinput) > 1:
+            if uinput[1] in findflag("system"): from bin.cmd.delete_system import delete_system;save["systems"]=delete_system(save["systems"])
+        else: print(" >> Please specify entry type")
+
+    elif uinput[0] in findflag("list"):
+        if len(uinput) > 1:
+            def printall(flag,title):
+                string=" { Saved " + title + ": \n"
+                for i in save[flag]:
+                    string = string + " - " + i + "\n"
+                print(string)
+            if uinput[1] in findflag("system"):
+                printall("systems","Systems")
         else: print(" >> Please specify entry type")
 
     else: pass # <- Tells the script to ignore what happened if input doesn't fall under any of the above options. May not be relevant.

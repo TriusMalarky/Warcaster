@@ -6,7 +6,7 @@ def new_system(saved):
     # Initialize Function Variables
     data={} # Initiate new dictionary
     data["entrytype"]="system" # Local variable for use in libfuncs
-    data=entryinit(data,saved)
+    data=newentryinit(data,saved)
 
     
     # Using a separate clause from checkifused function because systems only have the name as data.
@@ -22,8 +22,9 @@ def new_system(saved):
                 savedexc.append(i)
         savedexcstr=str(savedexc)
         #Write File
-        print(" { Saving system " + data["entrytype"])
+        print(" { Saving "+data["entrytype"]+" " + data["name"])
         savefile.write(str("saved="+savedexcstr));savefile.close()
     print(" - Complete - ")
+    return saved # <- Return the new saved list for runtime updating
 
     

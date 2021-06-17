@@ -8,13 +8,14 @@ editflags=["e","edit","ed","edi"]
 exitflags=["x","exit","ex"]
 helpflags=["h","help"]
 itemflags=["i","item"]
+listflags=["list","li","lis","l"]
 newflags=["n","new"]
 reconcileflags=["rec","recon","reconcile","reco"]
 systemflags=["system","sys"]
 
 # ALL flags.
-flagslist=[allflags,attackflags,currencyflags,debugflags,deleteflags,editflags,exitflags,helpflags,itemflags,newflags,reconcileflags,systemflags]
-flagnames=["all","attack","currency","debug","delete","edit","exit","help","item","new","reconcile","system"]
+flagslist=[allflags,attackflags,currencyflags,debugflags,deleteflags,editflags,exitflags,helpflags,itemflags,listflags,newflags,reconcileflags,systemflags]
+flagnames=["all","attack","currency","debug","delete","edit","exit","help","item","list","new","reconcile","system"]
 
 toplevelflags=[newflags,debugflags,exitflags,helpflags,reconcileflags,editflags,deleteflags] # All flags that trigger their own commands.
 entrycommandflags=[newflags,reconcileflags,editflags,deleteflags] # All top level flags that deal with entries.
